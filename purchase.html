@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase</title>
+    <link rel="stylesheet" type="text/css" href="style/purchase.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="img/Logo.png" alt="GameStoB Logo">
+        </a>
+        <div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalog.html">Catalog</a></li>
+                <li><a class="active" href="purchase.html">Purchase</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="location.html">Location</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="checkout-page">
+        <!-- payment form -->
+        <div class="checkout-form-column">
+            <div class="form-card">
+                <form>
+                    <div class="customer-info-section">
+                        <h3>Customer Information</h3>
+                        <label for="fname">Full Name</label>
+                        <input type="text" id="fname" name="fullname" placeholder="Sebastian Dustin Kumala">
+
+                        <label for="email">Email</label>
+                        <p>Your receipt and product keys will be sent to this email address.</p>
+                        <input type="text" id="email" name="email" placeholder="sdustink@gmail.com">
+
+                        <label for="num">Phone Number</label>
+                        <input type="text" id="num" name="phone" placeholder="0813-6767-6767">
+                    </div>
+
+                    <div class="payment-section">
+                        <h3>Payment Method</h3>
+
+                        <label>Card Provider</label>
+                        <div class="card-provider">
+                            <label class="card-provider-option">
+                                <input type="radio" name="card_provider" value="visa">
+                                Visa
+                            </label>
+                            <label class="card-provider-option">
+                                <input type="radio" name="card_provider" value="mastercard">
+                                Mastercard
+                            </label>
+                        </div>
+
+                        <label for="cname">Cardholder Name</label>
+                        <input type="text" id="cname" name="cardname" placeholder="Sebastian Dustin Kumala">
+
+                        <label for="ccnum">Card Number</label>
+                        <input type="text" id="ccnum" name="cardnumber" placeholder="0000-1111-2222-3333">
+
+                        <div class="card-expiry-row">
+                            <div class="card-expiry-field">
+                                <label for="expmonth">Expiration Month</label>
+                                <select id="expmonth">
+                                    <option value="1">January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+                            </div>
+                            <div class="card-expiry-field">
+                                <label for="expyear">Expiration Year</label>
+                                <input type="text" id="expyear" name="expyear" placeholder="2028">
+                            </div>
+                            <div class="card-expiry-field">
+                                <label for="cvv">CVV / Security Code</label>
+                                <input type="text" id="cvv" name="cvv" placeholder="420">
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="divider">
+                    <div class="promo-section">
+                        <label for="redeem">Promotions (optional)</label>
+                        <div class="redeem-box">
+                            <input type="text" id="redeem" name="redeem_code" placeholder="Enter your code">
+                            <button type="button" class="redeem-btn">Apply</button>
+                        </div>
+                        <label class="promo-checkbox">
+                            <input type="checkbox" name="promo" value="promo">
+                            <span>I would like to receive promotional materials and information about on-going sales to my inbox</span>
+                        </label>
+                    </div>
+
+                    <input type="submit" value="Process Payment" class="checkout-submit-btn">
+                </form>
+            </div>
+        </div>
+
+        <!-- order summary -->
+        <div class="order-summary-column">
+            <div class="order-summary-card">
+                <h3>Order Summary</h3>
+
+                <div class="order-item">
+                    <img src="img/game-3.png" alt="Product 1" class="order-item-image">
+                    <div class="order-item-details">
+                        <span class="order-item-name">Tropico 7</span>
+                        <span class="order-item-price">Rp690.000</span>
+                    </div>
+                </div>
+
+                <div class="order-item">
+                    <img src="img/game-5.png" alt="Product 2" class="order-item-image">
+                    <div class="order-item-details">
+                        <span class="order-item-name">Forza Horizon 6</span>
+                        <span class="order-item-price">Rp1.590.000</span>
+                    </div>
+                </div>
+
+                <div class="order-item">
+                    <img src="img/game-10.png" alt="Product 3" class="order-item-image">
+                    <div class="order-item-details">
+                        <span class="order-item-name">Sid Meier's Civilization VII</span>
+                        <span class="order-item-price">Rp590.000</span>
+                    </div>
+                </div>
+
+                <div class="order-item">
+                    <img src="img/game-11.png" alt="Product 4" class="order-item-image">
+                    <div class="order-item-details">
+                        <span class="order-item-name">Grand Theft Auto VI</span>
+                        <span class="order-item-price">Rp9.990.000</span>
+                    </div>
+                </div>
+
+                <hr class="divider">
+
+                <div class="order-total-row">
+                    <span class="order-total-label">Total</span>
+                    <span class="order-total-price">Rp12.860.000</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="section-default">
+        <div class="foot">
+
+            <!-- kiri -->
+            <div class="foot-left">
+                <img src="img/Logo.png" alt="">
+
+                <p>
+                    © 2026 gameStoB Corporation. All rights reserved.
+                    All trademarks are property of their respective owners
+                    in Indonesia and other countries.
+                </p>
+            </div>
+
+            <!-- kanan -->
+            <div class="foot-right">
+                <a href="about.html">About Us</a>
+
+                <li><strong>HQ Address</strong>: Jl. Kebon Jeruk Raya No. 27, Kebon Jeruk, Jakarta, Indonesia</li>
+
+                <li><strong>Call Center</strong>: 021 6767 6942</li>
+
+                <li><strong>Hours</strong>: 10:00 - 18:00, Monday - Saturday</li>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="script/purchase.js"></script>
+</body>
+</html>
